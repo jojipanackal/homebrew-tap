@@ -15,12 +15,12 @@ cask "poli" do
     on_intel do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "0808cec653d0c87d4152a62d260d54f6ac9a8cc66f42619542b0d751eff52696"
+      sha256 "c346815a42ecf1a074dca99178997dc2e2ac47185753931ef4ad8a84166bb96a"
     end
     on_arm do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "18a3f955650e15954a2582d6867e06b65554290827608eea4e0286d75fe2b566"
+      sha256 "78d16b5ce4c4096a3fe117ecc385f03f406113de76a2089c47845bc9b888310b"
     end
   end
 
@@ -28,12 +28,12 @@ cask "poli" do
     on_intel do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_linux_amd64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "05903d07aab9e0e8af21d92f3ec457319ae6bbc9cd6f8e829191d7b9ef07b101"
+      sha256 "81501e62276352c0d782b7b368d92ac54d7495263deed869b5a29dce0580395b"
     end
     on_arm do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_linux_arm64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "7e82610ddd6d08644974e7717f5ce7bf3d09478f73d9f795847c9b6e09db1339"
+      sha256 "da6ac5fcb9567f8f366bf1ea8d82bbec68f38f97497ce4a5117f783b4ad1a586"
     end
   end
 
@@ -44,8 +44,8 @@ cask "poli" do
 
   caveats do
     "Get started:"
-    "  poli new group "My APIs""
-    "  poli new "Get Users" --url https://jsonplaceholder.typicode.com/users"
+    "  poli new group \"My APIs\""
+    "  poli new \"Get Users\" --url https://jsonplaceholder.typicode.com/users"
     "  poli ping r1"
     ""
     "Run 'poli help' for all commands."
