@@ -3,24 +3,27 @@ cask "poli" do
   name "poli"
   desc "Terminal-based HTTP client — collections, requests, curl import, zero lag."
   homepage "https://github.com/jojipanackal/poli"
-  version "0.1.1"
+  version "0.1.2"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
   binary "poli"
+  bash_completion "completions/poli.bash"
+  zsh_completion "completions/poli.zsh"
+  fish_completion "completions/poli.fish"
 
   on_macos do
     on_intel do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "c346815a42ecf1a074dca99178997dc2e2ac47185753931ef4ad8a84166bb96a"
+      sha256 "92e47ccd19a2954b72d24fb91a37116d7b1341cd94aa8978773242f3867a0ce2"
     end
     on_arm do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "78d16b5ce4c4096a3fe117ecc385f03f406113de76a2089c47845bc9b888310b"
+      sha256 "8763e9df4c2eaadf2ff21f3c82317fe011eb672fc2977b1fe0a662f9a3627901"
     end
   end
 
@@ -28,18 +31,17 @@ cask "poli" do
     on_intel do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_linux_amd64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "81501e62276352c0d782b7b368d92ac54d7495263deed869b5a29dce0580395b"
+      sha256 "31cb4607ca96b5933b04bb46569d2f970eca45700649729d18ec117554396ad4"
     end
     on_arm do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_linux_arm64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "da6ac5fcb9567f8f366bf1ea8d82bbec68f38f97497ce4a5117f783b4ad1a586"
+      sha256 "08585a28262cf6899c5ca54f8cf402981e512ba1afe3fa8b552d7f075952f710"
     end
   end
 
   postflight do
     system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/poli"]
-    system_command "#{staged_path}/poli", args: ["version"]
   end
 
   caveats do
