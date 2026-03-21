@@ -3,7 +3,7 @@ cask "poli" do
   name "poli"
   desc "Terminal-based HTTP client — collections, requests, curl import, zero lag."
   homepage "https://github.com/jojipanackal/poli"
-  version "0.1.2"
+  version "0.1.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -18,12 +18,12 @@ cask "poli" do
     on_intel do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "6b50195591f1ca5384a36b209fc4f8621998ca88125da6fc3863c6963851de5c"
+      sha256 "def75ebe8244dc70f21c9a0b0c0ffc167b058996529d116fc4ea2b329574adb0"
     end
     on_arm do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "d17163fdd76166b1d16618cff1e15942be5ffb0345ce03baf8d3d15b34b373e3"
+      sha256 "22e1c02d1e77828cfc61634ec46361145e81aa914e5199ebb72eabf6f1259884"
     end
   end
 
@@ -31,12 +31,12 @@ cask "poli" do
     on_intel do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_linux_amd64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "da390904ca3537fb9739cc4226dab2cbfcd33c4320dd7932c4af897cdcc7af6d"
+      sha256 "e20c411e684d77a696d220113302e1245fa136e80017db9a1e5ad807b333efd8"
     end
     on_arm do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_linux_arm64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "6f8734f69a483269e750bfe79f0867ae00979ebf22417c299cfdd7620887420c"
+      sha256 "a2a09e43631960fc22dfb7a43b7be51df6c0ee2f3331a70928bbf8e1bc268998"
     end
   end
 
