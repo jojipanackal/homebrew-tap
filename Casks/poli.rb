@@ -18,12 +18,12 @@ cask "poli" do
     on_intel do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "92e47ccd19a2954b72d24fb91a37116d7b1341cd94aa8978773242f3867a0ce2"
+      sha256 "6b50195591f1ca5384a36b209fc4f8621998ca88125da6fc3863c6963851de5c"
     end
     on_arm do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "8763e9df4c2eaadf2ff21f3c82317fe011eb672fc2977b1fe0a662f9a3627901"
+      sha256 "d17163fdd76166b1d16618cff1e15942be5ffb0345ce03baf8d3d15b34b373e3"
     end
   end
 
@@ -31,17 +31,18 @@ cask "poli" do
     on_intel do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_linux_amd64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "31cb4607ca96b5933b04bb46569d2f970eca45700649729d18ec117554396ad4"
+      sha256 "da390904ca3537fb9739cc4226dab2cbfcd33c4320dd7932c4af897cdcc7af6d"
     end
     on_arm do
       url "https://github.com/jojipanackal/poli/releases/download/v#{version}/poli_#{version}_linux_arm64.tar.gz",
         verified: "github.com/jojipanackal/poli"
-      sha256 "08585a28262cf6899c5ca54f8cf402981e512ba1afe3fa8b552d7f075952f710"
+      sha256 "6f8734f69a483269e750bfe79f0867ae00979ebf22417c299cfdd7620887420c"
     end
   end
 
   postflight do
     system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/poli"]
+    system_command "#{staged_path}/poli", args: ["version"]
   end
 
   caveats do
